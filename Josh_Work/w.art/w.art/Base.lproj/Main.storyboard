@@ -101,11 +101,17 @@
                                 <rect key="frame" x="154.66666666666666" y="516.66666666666663" width="84" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Sign Up"/>
+                                <connections>
+                                    <segue destination="prW-Ww-fY6" kind="show" id="MJm-M1-9bE"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vk2-RY-6Xd">
                                 <rect key="frame" x="161.33333333333334" y="631.66666666666663" width="70.333333333333343" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Log In"/>
+                                <connections>
+                                    <segue destination="1Py-r2-Xqn" kind="show" id="73a-ee-Urk"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3SK-os-FoF"/>
@@ -120,10 +126,67 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Account" id="bSQ-e7-fGL"/>
+                    <navigationItem key="navigationItem" id="Ush-Rc-9WS"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ial-nU-jop" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-318" y="974"/>
+        </scene>
+        <!--SignUpView-->
+        <scene sceneID="5x6-J0-p98">
+            <objects>
+                <viewController id="prW-Ww-fY6" userLabel="SignUpView" customClass="SignUpViewController" customModule="w_art" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a5l-aI-8EY">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggF-1B-QIo">
+                                <rect key="frame" x="166.66666666666666" y="411" width="60" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6OO-Zy-UQR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ggF-1B-QIo" firstAttribute="centerX" secondItem="a5l-aI-8EY" secondAttribute="centerX" id="Tk1-Nn-pRi"/>
+                            <constraint firstItem="ggF-1B-QIo" firstAttribute="centerY" secondItem="a5l-aI-8EY" secondAttribute="centerY" id="tLa-AG-cp2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="MjC-be-K3U"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bHu-n7-dGg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1295" y="924"/>
+        </scene>
+        <!--LogInView-->
+        <scene sceneID="ijh-hA-WFD">
+            <objects>
+                <viewController id="1Py-r2-Xqn" userLabel="LogInView" customClass="LogInViewController" customModule="w_art" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SaQ-ng-KIn">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ZG-uT-LGf">
+                                <rect key="frame" x="173" y="410.66666666666669" width="47" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2l1-fu-dJv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9ZG-uT-LGf" firstAttribute="centerY" secondItem="SaQ-ng-KIn" secondAttribute="centerY" id="X2U-Gw-ASz"/>
+                            <constraint firstItem="9ZG-uT-LGf" firstAttribute="centerX" secondItem="SaQ-ng-KIn" secondAttribute="centerX" id="jkB-bj-xeC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="7Ko-Qa-ft8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vQH-Py-TNZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="1746"/>
         </scene>
     </scenes>
     <resources>
