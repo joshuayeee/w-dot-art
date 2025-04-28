@@ -24,6 +24,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6068FE1A2DBF85CB0074EDE0 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		607D4E852DBE002500CAA24E /* w.art.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = w.art.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607D4E9B2DBE002700CAA24E /* w.artTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = w.artTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607D4EA52DBE002700CAA24E /* w.artUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = w.artUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,12 +86,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6068FE192DBF85CB0074EDE0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6068FE1A2DBF85CB0074EDE0 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		607D4E7C2DBE002500CAA24E = {
 			isa = PBXGroup;
 			children = (
 				607D4E872DBE002500CAA24E /* w.art */,
 				607D4E9E2DBE002700CAA24E /* w.artTests */,
 				607D4EA82DBE002700CAA24E /* w.artUITests */,
+				6068FE192DBF85CB0074EDE0 /* Frameworks */,
 				607D4E862DBE002500CAA24E /* Products */,
 			);
 			sourceTree = "<group>";
