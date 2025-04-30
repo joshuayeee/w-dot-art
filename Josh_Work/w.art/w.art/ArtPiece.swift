@@ -13,6 +13,7 @@ class ArtPiece {
     init(art_id: Int, art_name: String) {
         self.art_id = art_id
         self.art_name = art_name
+        print("art piece")
     }
     
     func get_art_id() -> Int {
