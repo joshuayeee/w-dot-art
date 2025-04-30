@@ -16,6 +16,8 @@ class TabController : UITabBarController {
     private var art_pieces: Array<ArtPiece>?
     private var account_art: Array<AccountArt>?
     
+    private var user_account: Account?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,6 +25,11 @@ class TabController : UITabBarController {
         dbQueue = try? getDatabaseQueue()
         loadAllData()
         print("lol2")
+    }
+    
+    override func setViewControllers(_ viewControllers: [UIViewController]?, animated: Bool) {
+        super.setViewControllers(viewControllers, animated: animated)
+        print("lol3")
     }
     
     private func getDatabaseQueue() throws -> DatabaseQueue {
@@ -65,6 +72,36 @@ class TabController : UITabBarController {
             for row in accountArtRows {
                 account_art!.append(AccountArt(my_username: row[0], art_id: row[1]))
             }
+        }
+    }
+    
+    func check_for_account(username: String, password: String) {
+        if (user_account == nil) {
+            for account in accounts! {
+                if (username == account.get_username()) {
+                    if (password == account.get_password()) {
+                        user_account = account
+                    }
+                    else {
+                        print("wrong password")
+                    }
+                }
+                else {
+                    print("wrong username")
+                }
+            }
+        }
+        else {
+            print("already signed in")
+        }
+    }
+    
+    func log_out_account() {
+        if (user_account != nil) {
+            user_account = nil
+        }
+        else {
+            print("not logged in")
         }
     }
     
