@@ -10,11 +10,13 @@ class Account {
     private let my_username: String
     private let my_password: String
     private let my_email: String
+    private var signed_in: Bool
     
     init(username: String, password: String, email: String) {
         self.my_username = username
         self.my_password = password
         self.my_email = email
+        signed_in = false
         print("account")
     }
     
@@ -28,6 +30,10 @@ class Account {
     
     func get_email() -> String {
         return my_email
+    }
+    
+    func set_signed_in(is_signed_in: Bool) {
+        signed_in = is_signed_in
     }
     
 }
