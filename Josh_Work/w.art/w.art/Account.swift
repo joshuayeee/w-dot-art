@@ -15,6 +15,7 @@ class Account {
         self.my_username = username
         self.my_password = password
         self.my_email = email
+        print("account")
     }
     
     func get_username() -> String {

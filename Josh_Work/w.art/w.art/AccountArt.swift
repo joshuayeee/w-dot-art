@@ -13,6 +13,7 @@ class AccountArt {
     init(my_username: String, art_id: Int) {
         self.my_username = my_username
         self.art_id = art_id
+        print("account art")
     }
     
 }

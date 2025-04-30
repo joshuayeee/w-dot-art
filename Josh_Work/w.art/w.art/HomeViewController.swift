@@ -10,11 +10,9 @@ import GRDB
 
 class HomeViewController: UIViewController {
     
-    private var dbQueue: DatabaseQueue?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
     }
-
 }
