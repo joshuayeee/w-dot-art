@@ -6,6 +6,7 @@ target 'w.art' do
   use_frameworks!
 
   # Pods for w.art
+	pod 'GRDB.swift'
 
   target 'w.artTests' do
     inherit! :search_paths
