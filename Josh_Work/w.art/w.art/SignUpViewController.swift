@@ -9,13 +9,12 @@ import UIKit
 
 class SignUpViewController : UIViewController {
     
+    private var my_tab: TabController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        print("lol")
+        
+        my_tab = presentingViewController as? TabController
     }
     
 }
