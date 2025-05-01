@@ -13,8 +13,6 @@ struct Art: Identifiable {
     let downloadURL: String
 }
 
-import Foundation
-
 let sampleArtworks: [Art] = [
     Art(title: "Apple Face", imageName: "Apple Face", downloadURL: "Apple Face"),
     Art(title: "Bana", imageName: "Bana", downloadURL: "Bana"),
