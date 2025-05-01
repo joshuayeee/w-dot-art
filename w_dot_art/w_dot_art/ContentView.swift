@@ -60,35 +60,40 @@ struct ArtDetailView: View {
     @Environment(\.presentationMode) var presentationMode // Used to dismiss the current view
 
     var body: some View {
-        VStack(spacing: 20) {
-            // Display the artwork image
-            Image(art.imageName)
-                .resizable()
-                .scaledToFit()
-                .cornerRadius(10)
-                .padding()
-
-            // Display the artwork title
-            Text(art.title)
-                .font(.title)
-                .bold()
-
-            // Add to Cart button
-            Button(action: {
-                cartManager.addToCart(art)
-                presentationMode.wrappedValue.dismiss() // Close the detail view after adding
-            }) {
-                Text("Add to Cart")
-                    .fontWeight(.semibold)
+        ZStack {
+            Color(.black)
+            VStack(spacing: 20) {
+                // Display the artwork image
+                Image(art.imageName)
+                    .resizable()
+                    .scaledToFit()
+                    .cornerRadius(10)
                     .padding()
-                    .frame(maxWidth: .infinity)
-                    .background(Color.green)
-                    .foregroundColor(.white)
-                    .cornerRadius(12)
-                    .padding(.horizontal)
+
+                // Display the artwork title
+                Text(art.title)
+                    .font(.title)
+                    .foregroundStyle(.white)
+                    .bold()
+
+                // Add to Cart button
+                Button(action: {
+                    cartManager.addToCart(art)
+                    presentationMode.wrappedValue.dismiss() // Close the detail view after adding
+                }) {
+                    Text("Add to Cart")
+                        .fontWeight(.semibold)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color.green)
+                        .foregroundColor(.white)
+                        .cornerRadius(12)
+                        .padding(.horizontal)
+                }
+
+                Spacer()
             }
 
-            Spacer()
         }
         .navigationTitle("Artwork")
         .toolbarBackground(Color(.white), for: .navigationBar)
