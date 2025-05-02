@@ -135,23 +135,14 @@ struct CartView: View {
 
                 Button(action: {
                     for art in cartManager.cartItems {
-                        if let uiImage = UIImage(named: art.imageName),
-                           let imageData = uiImage.pngData() {
-
-                            let fileName = "\(art.title).png"
-                            let fileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent(fileName)
-
-                            do {
-                                try imageData.write(to: fileURL)
-                                print("Saved \(fileName) to \(fileURL)")
-                            } catch {
-                                print("Failed to save \(fileName): \(error)")
-                            }
+                        if let image = UIImage(named: art.imageName) {
+                            // Save the image to the Photos app
+                            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+                            print("Saved \(art.title) to Photos")
                         } else {
                             print("Image not found for \(art.imageName)")
                         }
                     }
-
                     cartManager.clearCart()
                 }) {
                     Text("Download All (\(cartManager.cartItems.count))")
