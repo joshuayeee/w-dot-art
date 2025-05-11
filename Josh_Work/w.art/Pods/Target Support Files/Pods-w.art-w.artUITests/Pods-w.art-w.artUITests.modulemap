@@ -1,6 +1,0 @@
-framework module Pods_w_art_w_artUITests {
-  umbrella header "Pods-w.art-w.artUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}
